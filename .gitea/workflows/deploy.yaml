@@ -20,4 +20,4 @@ jobs:
 
       - name: Deploy new version
         run: |
-          docker run -d --name merlin-link-deploy -p 8080:80 --restart unless-stopped -v .:/usr/share/nginx/html localhost/merlinlittlelink
+          docker run -d --name merlin-link-deploy -p 8080:80 --restart unless-stopped localhost/merlinlittlelink
