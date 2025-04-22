@@ -1,0 +1,23 @@
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Build image
+        run: |
+          docker build -f Dockerfile -t localhost/merlinlittlelink .
+
+      - name: Stop and remove running container
+        run: |
+          docker stop merlin-link-deploy || true && docker rm merlin-link-deploy || true
+
+      - name: Deploy new version
+        run: |
+          docker run -d --name merlin-link-deploy -p 8080:80 --restart unless-stopped -v .:/usr/share/nginx/html localhost/merlinlittlelink
