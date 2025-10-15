@@ -244,6 +244,32 @@ a:hover {
 	color:var(--button-text);
 }
 
+/* Pixel art Button
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button-pixelart {
+	color: #ffffff !important;
+	background-color: #4a4a4a !important;
+	padding: 0.9375rem 1rem !important;
+	margin-bottom: 2rem !important;
+	font-size: 1.40rem !important;
+	font-family: 'Pixelify Sans', monospace !important;
+	font-weight: 700 !important;
+	shape-rendering: crispEdges;
+	border: 0 !important;
+	border-radius: 0 !important;
+	box-shadow:
+		0px 5px #ffffff,
+		0px -5px #ffffff,
+		5px 0px #ffffff,
+		-5px 0px #ffffff,
+		0px 10px #000000aa,
+		5px 5px #000000aa,
+		-5px 5px #000000aa,
+		inset 0px 5px #ffffff36 !important;
+	cursor: pointer;
+}
+
+
 /* Responsive Typography
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   @media (max-width:34.375rem) {            /* 550px */
